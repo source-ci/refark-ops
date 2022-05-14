@@ -16,6 +16,8 @@ spec:
       parameters:
         - name: "storageClasses.default.name"
           value: "standard"
+        - name: "storageClasses.shared.name"
+          value: "standard"
 
   # Destination cluster and namespace to deploy the application
   destination:
