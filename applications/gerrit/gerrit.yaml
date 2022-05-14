@@ -13,24 +13,9 @@ spec:
     path: helm-charts/gerrit
 
     helm:
-      # Extra parameters to set (same as setting through values.yaml, but these take precedence)
       parameters:
-        - name: "nginx-ingress.controller.service.annotations.external-dns\\.alpha\\.kubernetes\\.io/hostname"
-          value: mydomain.example.com
-        - name: "ingress.annotations.kubernetes\\.io/tls-acme"
-          value: "true"
-          forceString: true # ensures that value is treated as a string
-
-      # Use the contents of files as parameters (uses Helm's --set-file)
-      fileParameters:
-#        - name: config
-#          path: files/config.json
-
-      # Helm values files for overriding values in the helm chart
-      # The path is relative to the spec.source.path directory defined above
-      valueFiles:
-#        - values-prod.yaml
-
+        - name: "storageClasses.default.name"
+          value: "standard"
 
   # Destination cluster and namespace to deploy the application
   destination:
