@@ -23,8 +23,8 @@ spec:
 
       # Use the contents of files as parameters (uses Helm's --set-file)
       fileParameters:
-        - name: config
-          path: files/config.json
+#        - name: config
+#          path: files/config.json
 
       # Helm values files for overriding values in the helm chart
       # The path is relative to the spec.source.path directory defined above
