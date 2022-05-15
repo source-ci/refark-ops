@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+    inputs:
+      application:
+        required: true
+      digest:
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.event.inputs.application }} ${{ github.event.inputs.application }}"
