@@ -1,3 +1,4 @@
+name: deploy
 on:
   workflow_dispatch:
     inputs:
@@ -10,4 +11,4 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.event.inputs.application }} ${{ github.event.inputs.application }}"
+      - run: echo "${{ github.event.inputs.application }} ${{ github.event.inputs.digest }}"
